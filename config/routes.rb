@@ -3,5 +3,6 @@ Rails.application.routes.draw do
     collection { post :import }
   end
 
+  resources :items
   root to: 'attributes#index'
 end
