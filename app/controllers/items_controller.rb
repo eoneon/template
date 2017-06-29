@@ -9,7 +9,7 @@ class ItemsController < ApplicationController
 
   def new
     @item = Item.new
-    # @item.descriptions.build
+    @item.descriptions.build
   end
 
   def create

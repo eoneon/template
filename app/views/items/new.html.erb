@@ -5,6 +5,14 @@
       <%= f.label :name %><br />
       <%= f.text_field :name %>
     </div>
+      <p>
+      <%= f.fields_for :descriptions_attributes do |description| %>
+        <%= description.label :attribute_id %>
+        <%= collection_select(:description, :attribute_id, Attribute.select(:kind).distinct, :id, :kind) %>
+      <% end %>
+    </p>
+    </div>
     <%= f.submit "Save" %>
+
   <% end %>
 </div>
