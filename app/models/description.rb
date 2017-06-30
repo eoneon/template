@@ -1,4 +1,4 @@
 class Description < ActiveRecord::Base
   belongs_to :item
-  belongs_to :elements, class_name: :Attribute
+  belongs_to :element, class_name: :Attribute
 end
